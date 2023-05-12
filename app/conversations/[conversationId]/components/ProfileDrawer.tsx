@@ -5,10 +5,8 @@ import { Dialog, Transition } from '@headlessui/react'
 import { IoClose, IoTrash } from 'react-icons/io5'
 import { Conversation, User } from '@prisma/client'
 import { format } from 'date-fns'
-
 import useOtherUser from '@/app/hooks/useOtherUser'
 import useActiveList from '@/app/hooks/useActiveList'
-
 import Avatar from '@/app/components/Avatar'
 import AvatarGroup from '@/app/components/AvatarGroup'
 import ConfirmModal from './ConfirmModal'
@@ -126,25 +124,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                             <dl className='space-y-8 px-4 sm:space-y-6 sm:px-6'>
                               {data.isGroup && (
                                 <div>
-                                  <dt
-                                    className='
-                                  text-sm 
-                                  font-medium 
-                                  text-gray-500 
-                                  sm:w-40 
-                                  sm:flex-shrink-0
-                                '
-                                  >
+                                  <dt className='text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0'>
                                     Emails
                                   </dt>
-                                  <dd
-                                    className='
-                                  mt-1 
-                                  text-sm 
-                                  text-gray-900 
-                                  sm:col-span-2
-                                '
-                                  >
+                                  <dd className='mt-1 text-sm text-gray-900 sm:col-span-2'>
                                     {data.users
                                       .map((user) => user.email)
                                       .join(', ')}
@@ -153,25 +136,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                               )}
                               {!data.isGroup && (
                                 <div>
-                                  <dt
-                                    className='
-                                  text-sm 
-                                  font-medium 
-                                  text-gray-500 
-                                  sm:w-40 
-                                  sm:flex-shrink-0
-                                '
-                                  >
+                                  <dt className='text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0'>
                                     Email
                                   </dt>
-                                  <dd
-                                    className='
-                                  mt-1 
-                                  text-sm 
-                                  text-gray-900 
-                                  sm:col-span-2
-                                '
-                                  >
+                                  <dd className='mt-1 text-sm text-gray-900 sm:col-span-2'>
                                     {otherUser.email}
                                   </dd>
                                 </div>
@@ -180,24 +148,12 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                                 <>
                                   <hr />
                                   <div>
-                                    <dt
-                                      className='
-                                    text-sm 
-                                    font-medium 
-                                    text-gray-500 
-                                    sm:w-40 
-                                    sm:flex-shrink-0
-                                  '
-                                    >
+                                    <dt className='text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0'>
                                       Joined
                                     </dt>
                                     <dd
                                       className='
-                                    mt-1 
-                                    text-sm 
-                                    text-gray-900 
-                                    sm:col-span-2
-                                  '
+                                    mt-1 text-sm text-gray-900 sm:col-span-2'
                                     >
                                       <time dateTime={joinedDate}>
                                         {joinedDate}
