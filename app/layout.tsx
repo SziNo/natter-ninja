@@ -6,8 +6,8 @@ import AuthContext from './context/AuthContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Messenger Clone',
-  description: 'Messenger Clone',
+  title: 'Natter Ninja',
+  description: 'Natter Ninja',
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
