@@ -1,11 +1,11 @@
-import prisma from '@/app/libs/prismadb'
-import getCurrentUser from './getCurrentUser'
+import prisma from '@/app/libs/prismadb';
+import getCurrentUser from './getCurrentUser';
 
 const getConversations = async () => {
-  const currentUser = await getCurrentUser()
+  const currentUser = await getCurrentUser();
 
   if (!currentUser?.id) {
-    return []
+    return [];
   }
 
   try {
@@ -27,12 +27,12 @@ const getConversations = async () => {
           },
         },
       },
-    })
+    });
 
-    return conversations
+    return conversations;
   } catch (error: any) {
-    return []
+    return [];
   }
-}
+};
 
-export default getConversations
+export default getConversations;

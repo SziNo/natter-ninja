@@ -1,4 +1,4 @@
-import prisma from '@/app/libs/prismadb'
+import prisma from '@/app/libs/prismadb';
 
 const getMessages = async (conversationId: string) => {
   try {
@@ -13,12 +13,12 @@ const getMessages = async (conversationId: string) => {
       orderBy: {
         createdAt: 'asc',
       },
-    })
+    });
 
-    return messages
+    return messages;
   } catch (error: any) {
-    return []
+    return [];
   }
-}
+};
 
-export default getMessages
+export default getMessages;

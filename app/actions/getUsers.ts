@@ -1,11 +1,11 @@
-import prisma from '@/app/libs/prismadb'
-import getSession from './getSession'
+import prisma from '@/app/libs/prismadb';
+import getSession from './getSession';
 
 const getUsers = async () => {
-  const session = await getSession()
+  const session = await getSession();
 
   if (!session?.user?.email) {
-    return []
+    return [];
   }
 
   try {
@@ -18,12 +18,12 @@ const getUsers = async () => {
           email: session.user.email,
         },
       },
-    })
+    });
 
-    return users
+    return users;
   } catch (error: any) {
-    return []
+    return [];
   }
-}
+};
 
-export default getUsers
+export default getUsers;
