@@ -4,7 +4,7 @@ https://natter-ninja.vercel.app/
 
 ## Stacks
 
-Next 13, Tailwind, Mongo Atlas, Prisma, NextAuth and Pusher.
+Next 13, Tailwind, Mongo Atlas, Prisma, NextAuth, Cloudinary and Pusher.
 
 ## Description
 
